@@ -1,0 +1,88 @@
+// Place your key bindings in this file to override the defaults
+[
+    // Terminal focus
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+
+    // Switch terminals
+    {
+        "key": "ctrl+down",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+up",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+shift+left",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+
+    // Kill active terminal
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
+    },
+
+    // Resize terminal
+    {
+        "key": "ctrl+alt+right",
+        "command": "workbench.action.terminal.resizePaneRight",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+
+    // New files
+    {
+        "key": "ctrl+n",
+        "command": "explorer.newFile",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "openEditors.newUntitledFile",
+        "when": "editorTextFocus"
+    },
+
+    // Collapse files in explorer
+    {
+        "key": "ctrl+shift+c",
+        "command": "workbench.files.action.collapseExplorerFolders",
+        "when": "explorerViewletFocus"
+    },
+
+    // Comment
+    {
+        "key": "ctrl+shift+[Backslash]",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+
+    // This isnt workin
+    {
+        "key": "ctrl+shift+e",
+        "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+alt+w",
+        "command": "workbench.action.closePanel"
+    },
+    // New ones:
+
+]

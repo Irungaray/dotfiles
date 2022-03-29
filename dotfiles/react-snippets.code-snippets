@@ -1,0 +1,94 @@
+{
+    "customReactArrowFunctionExportComponent": {
+        "prefix": "rafce",
+        "body": [
+            "const ${1:${TM_FILENAME_BASE}} = () => {",
+            "    return (",
+            "        <>$0</>",
+            "    )",
+            "};",
+            "",
+            "export { ${1:${TM_FILENAME_BASE}} }",
+            ""
+        ],
+        "description": "Custom React Arrow Function Component with ES7 module system",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "customReactArrowFunctionExportComponentWithPropTypes": {
+        "prefix": "rafcep",
+        "body": [
+            "import PropTypes from 'prop-types'",
+            "",
+            "const ${1:${TM_FILENAME_BASE}} = () => {",
+            "    return (",
+            "        <>$0</>",
+            "    )",
+            "};",
+            "",
+            "${1:${TM_FILENAME_BASE}}.propTypes = {",
+            "",
+            "}",
+            "",
+            "export { ${1:${TM_FILENAME_BASE}} }",
+            ""
+        ],
+        "description": "Custom React Arrow Function Component with ES7 module system and PropTypes",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "importPropTypes": {
+        "prefix": "ipt",
+        "body": ["import PropTypes from 'prop-types'"],
+        "description": "Prop Types import",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "customPropTypesDeclaration": {
+        "prefix": "cpt",
+        "body": ["${1:${TM_FILENAME_BASE}}.propTypes = {", "    $0", "}"],
+        "description": "Prop Types declaration",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "PropTypes": {
+        "prefix": "pt",
+        "body": ["PropTypes."],
+        "description": "Prop Types declaration",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "customExport": {
+        "prefix": "exp",
+        "body": [
+            "export { ${1:${TM_FILENAME_BASE}} } from './${1:${TM_FILENAME_BASE}}'",
+            ""
+        ],
+        "description": "Custom export for index file",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "consoleLog": {
+        "prefix": "clg",
+        "body": [
+            		"console.log($1)",
+    	],
+        "description": "Console log",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "axiosReq": {
+        "prefix": "axiosreq",
+        "body": [
+            "export const $1 = async () => {",
+            "    try {",
+            "        const res = await Axios({",
+            "            method: '$2',",
+            "            url: `\\${apiUri}/$3`,",
+            "            data: {$4}",
+            "        })",
+            "",
+            "        return res",
+            "    } catch (err) {",
+            "        return err",
+            "    }",
+            "}",
+            ""
+        ],
+        "description": "Axios request",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    }
+}
