@@ -35,6 +35,12 @@
         "description": "Custom React Arrow Function Component with ES7 module system and PropTypes",
         "scope": "typescript,typescriptreact,javascript,javascriptreact"
     },
+    "namedImportStatement": {
+        "prefix": "imp",
+        "body": ["import { $2 } from '$1'"],
+        "description": "Prop Types import",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
     "importPropTypes": {
         "prefix": "ipt",
         "body": ["import PropTypes from 'prop-types'"],

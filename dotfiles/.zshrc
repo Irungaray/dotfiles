@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/home/ray/.oh-my-zsh"
+export ZSH="/home/irunga/.oh-my-zsh"
 
 # Theme to load & theme config
     if [ ! -e  ".git" ]; then
@@ -26,7 +26,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
     alias minecraft="cd ~/Downloads/TLauncher && java -jar TLauncher.jar && exit"
-    # alias c="codium ."
+    alias c="codium ."
     alias ce="codium . && exit && exit"
     alias ne="nautilus . && exit"
     alias gac="git add . && git commit -m"
@@ -44,6 +44,7 @@ source $ZSH/oh-my-zsh.sh
     alias list="ls -R | grep -v "node_modules" | grep ":$" | perl -pe 's/:$//;s/[^-][^\/]*\//    /g;s/^    (\S)/└── \1/;s/(^    |    (?= ))/│   /g;s/    (\S)/└── \1/'"
     alias src="source ~/.zshrc"
     alias bp="bpytop"
+    alias x="cd ~/.config/regolith && vim Xresources"
 
 # Functions
     # Git clone & cd into
@@ -54,6 +55,11 @@ source $ZSH/oh-my-zsh.sh
     # Git clone, cd into & open VSC instance
     function gcce(){
         g clone "$1" && cd $(basename $_ .git) && codium . && exit
+    }
+
+    # Search ZSH's history
+    function search() {
+        grep -w "$1" ~/.zsh_history
     }
 
     # Calculator. Not working :(
