@@ -675,5 +675,8 @@ exec --no-startup-id $i3-wm.program.2
 set_from_resource $i3-wm.program.3 i3-wm.program.3 :
 exec --no-startup-id $i3-wm.program.3
 
-for_window [class="Telegram*"]; resize shrink width 10000px; resize grow width 400px;
-for_window [class="Slack*"]; resize shrink width 10000px; resize grow width 400px
+for_window [class="Telegram*"]; resize shrink width 10000px; resize grow width 600px;
+for_window [class="Slack*"]; resize shrink width 10000px; resize grow width 400px;
+for_window [title="Calculator*"]; resize shrink width 10000; resize grow width 600px;
+
+# On notebook, both on 400px or so

@@ -96,5 +96,83 @@
         ],
         "description": "Axios request",
         "scope": "typescript,typescriptreact,javascript,javascriptreact"
-    }
+    },
+    "themespacing": {
+        "prefix": "tspx",
+        "body": [
+            "`${theme.spacing($1)}px`,",
+        ],
+        "description": "V4 Mui Theme Spacing",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "jsonnotation": {
+        "prefix": "json",
+        "body": [
+            "\"$1\": \"$2\",",
+        ],
+        "description": "JSON Notation",
+        "scope": "javascript"
+    },
+    "translateExpression": {
+        "prefix": "t",
+        "body": [
+            "{t('$1')}",
+        ],
+        "description": "WNM Translate Hook React Expression",
+        "scope": "javascript,javascriptreact"
+    },
+    "borderRed": {
+        "prefix": "bdr",
+        "body": [
+            "border: \"3px solid red\"",
+        ],
+        "description": "Border red",
+        "scope": "javascript,javascriptreact"
+    },
+    "borderRedWithStylesProp": {
+        "prefix": "sbdr",
+        "body": [
+            "style={{ border: \"3px solid red\" }}",
+        ],
+        "description": "Border red with style prop",
+        "scope": "javascript,javascriptreact"
+    },
+    "WNMReactArrowFunctionExportComponent": {
+        "prefix": "wafce",
+        "body": [
+            "// External components",
+            "import React from \"react\";",
+            "import { Box } from \"@material-ui/core\";",
+            "",
+            "// Utils & Config",
+            "import { useStyles } from \"./${1:${TM_FILENAME_BASE}}.styles\";",
+            "",
+            "// Internal components",
+            "",
+            "const ${1:${TM_FILENAME_BASE}} = () => {",
+            "",
+            "    const { root } = useStyles();",
+            "",
+            "    return (",
+            "        <Box className={root}>",
+            "           $0",
+            "        </Box>",
+            "    )",
+            "",
+            "};",
+            "",
+            "export default ${1:${TM_FILENAME_BASE}};",
+            ""
+        ],
+        "description": "WNM React Arrow Function Component with ES7 module system",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "className": {
+        "prefix": "cl",
+        "body": [
+            "className={$0}",
+        ],
+        "description": "ClassName prop",
+        "scope": "javascript,javascriptreact"
+    },
 }
