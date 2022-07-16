@@ -41,10 +41,17 @@ source $ZSH/oh-my-zsh.sh
     alias glog="bash ~/bin/gym-logger.sh"
     alias dog="git log --all --decorate --oneline --graph"
     alias rn=". ranger"
-    alias list="ls -R | grep -v "node_modules" | grep ":$" | perl -pe 's/:$//;s/[^-][^\/]*\//    /g;s/^    (\S)/└── \1/;s/(^    |    (?= ))/│   /g;s/    (\S)/└── \1/'"
+    alias dir="ls -R | grep -v "node_modules" | grep ":$" | perl -pe 's/:$//;s/[^-][^\/]*\//    /g;s/^    (\S)/└── \1/;s/(^    |    (?= ))/│   /g;s/    (\S)/└── \1/'"
     alias src="source ~/.zshrc"
     alias bp="bpytop"
     alias x="cd ~/.config/regolith && vim Xresources"
+    alias windows="sudo vim /etc/regolith/i3/config"
+    alias ammend_commit="git add . && git commit --amend --no-edit"
+    alias stash="git stash"
+    alias list="git stash list"
+    alias pop="git stash pop"
+    alias drop="git stash drop"
+    alias push="git push"
 
 # Functions
     # Git clone & cd into
@@ -62,6 +69,11 @@ source $ZSH/oh-my-zsh.sh
         grep -w "$1" ~/.zsh_history
     }
 
+    # Push to upstream origin
+    function push_upstream () {
+    	git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
+    }
+
     # Calculator. Not working :(
     function c () {
         echo $(( ${1} ))
@@ -72,6 +84,6 @@ source $ZSH/oh-my-zsh.sh
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-    export DENO_INSTALL="/home/irunga/.deno"
-    export PATH="$DENO_INSTALL/bin:$PATH"
+    # export DENO_INSTALL="/home/irunga/.deno"
+    # export PATH="$DENO_INSTALL/bin:$PATH"
     # /home/irunga/.deno/bin/deno --help
