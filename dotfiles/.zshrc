@@ -52,6 +52,8 @@ source $ZSH/oh-my-zsh.sh
     alias pop="git stash pop"
     alias drop="git stash drop"
     alias push="git push"
+    alias c3="cd && sudo vim /etc/regolith/i3/config"
+    alias cc="vim  ~/.config/compton.conf"
 
 # Functions
     # Git clone & cd into
