@@ -150,5 +150,5 @@
         "key": "ctrl+shift+f3",
         "command": "-editor.action.previousSelectionMatchFindAction",
         "when": "editorFocus"
-    }
+    },
 ]
