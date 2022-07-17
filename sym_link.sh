@@ -18,6 +18,9 @@ ln -s ./dotfiles/.vimrc ~/.vimrc
 # Compton
 ln -s ./dotfiles/compton.conf ~/.config/compton.conf
 
+# Ranger
+ln -s ./dotfiles/scope.sh ~/.config/ranger/scope.sh
+
 # VSCodium
 ln -s ./dotfiles/keybindings.json ~/.config/VSCodium/User/keybindings.json
 ln -s ./dotfiles/settings.json ~/.config/VSCodium/User/settings.json

@@ -10,6 +10,7 @@ files=(
 
 	# Ranger
 	~/.config/ranger/rc.conf
+    ~/.config/ranger/scope.sh
 
 	# Vim
 	~/.vimrc
