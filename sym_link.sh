@@ -11,6 +11,7 @@ ln -s ./dotfiles/Xresources ~/.config/regolith/Xresources
 
 # Ranger
 ln -s ./dotfiles/rc.conf ~/.config/ranger/rc.conf
+ln -s ./dotfiles/scope.sh ~/.config/ranger/scope.sh
 
 # Vim
 ln -s ./dotfiles/.vimrc ~/.vimrc
