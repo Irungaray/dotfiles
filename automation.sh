@@ -72,6 +72,9 @@ sudo apt install nitrogen
 # Autokey
 sudo apt install autokey-gt
 
+# VLC
+sudo apt install vlc
+
 # GitHub Desktop
 cd ~/Downloads
 sudo wget https://github.com/shiftkey/desktop/releases/download/release-2.8.1-linux2/GitHubDesktop-linux-2.8.1-linux2.deb
