@@ -29,7 +29,6 @@ source $ZSH/oh-my-zsh.sh
     alias c="codium ."
     alias ce="codium . && exit && exit"
     alias ne="nautilus . && exit"
-    alias gac="git add . && git commit -m"
     alias n="npm"
     alias nr="npm run"
     alias nrd="npm run dev"
@@ -46,14 +45,19 @@ source $ZSH/oh-my-zsh.sh
     alias bp="bpytop"
     alias x="cd ~/.config/regolith && vim Xresources"
     alias windows="sudo vim /etc/regolith/i3/config"
+    alias c3="cd && sudo vim /etc/regolith/i3/config"
+    alias cc="vim  ~/.config/compton.conf"
+
+# Git Aliases
+    alias gac="git add . && git commit -m"
     alias ammend_commit="git add . && git commit --amend --no-edit"
     alias stash="git stash"
     alias list="git stash list"
     alias pop="git stash pop"
     alias drop="git stash drop"
     alias push="git push"
-    alias c3="cd && sudo vim /etc/regolith/i3/config"
-    alias cc="vim  ~/.config/compton.conf"
+    alias switch="git switch -"
+    alias commit="git commit -m"
 
 # Functions
     # Git clone & cd into
