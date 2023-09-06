@@ -1,178 +1,188 @@
 {
-    "customReactArrowFunctionExportComponent": {
-        "prefix": "rafce",
-        "body": [
-            "const ${1:${TM_FILENAME_BASE}} = () => {",
-            "    return (",
-            "        <>$0</>",
-            "    )",
-            "};",
-            "",
-            "export { ${1:${TM_FILENAME_BASE}} }",
-            ""
-        ],
-        "description": "Custom React Arrow Function Component with ES7 module system",
-        "scope": "typescript,typescriptreact,javascript,javascriptreact"
-    },
-    "customReactArrowFunctionExportComponentWithPropTypes": {
-        "prefix": "rafcep",
-        "body": [
-            "import PropTypes from 'prop-types'",
-            "",
-            "const ${1:${TM_FILENAME_BASE}} = () => {",
-            "    return (",
-            "        <>$0</>",
-            "    )",
-            "};",
-            "",
-            "${1:${TM_FILENAME_BASE}}.propTypes = {",
-            "",
-            "}",
-            "",
-            "export { ${1:${TM_FILENAME_BASE}} }",
-            ""
-        ],
-        "description": "Custom React Arrow Function Component with ES7 module system and PropTypes",
-        "scope": "typescript,typescriptreact,javascript,javascriptreact"
-    },
-    "namedImportStatement": {
-        "prefix": "imp",
-        "body": ["import { $2 } from '$1'"],
-        "description": "Prop Types import",
-        "scope": "typescript,typescriptreact,javascript,javascriptreact"
-    },
-    "importPropTypes": {
-        "prefix": "ipt",
-        "body": ["import PropTypes from 'prop-types'"],
-        "description": "Prop Types import",
-        "scope": "typescript,typescriptreact,javascript,javascriptreact"
-    },
-    "customPropTypesDeclaration": {
-        "prefix": "cpt",
-        "body": ["${1:${TM_FILENAME_BASE}}.propTypes = {", "    $0", "}"],
-        "description": "Prop Types declaration",
-        "scope": "typescript,typescriptreact,javascript,javascriptreact"
-    },
-    "PropTypes": {
-        "prefix": "pt",
-        "body": ["PropTypes."],
-        "description": "Prop Types declaration",
-        "scope": "typescript,typescriptreact,javascript,javascriptreact"
-    },
-    "customExport": {
-        "prefix": "exp",
-        "body": [
-            "export { ${1:${TM_FILENAME_BASE}} } from './${1:${TM_FILENAME_BASE}}'",
-            ""
-        ],
-        "description": "Custom export for index file",
-        "scope": "typescript,typescriptreact,javascript,javascriptreact"
-    },
-    "consoleLog": {
-        "prefix": "clg",
-        "body": [
-            		"console.log($1)",
-    	],
-        "description": "Console log",
-        "scope": "typescript,typescriptreact,javascript,javascriptreact"
-    },
-    "axiosReq": {
-        "prefix": "axiosreq",
-        "body": [
-            "export const $1 = async () => {",
-            "    try {",
-            "        const res = await Axios({",
-            "            method: '$2',",
-            "            url: `\\${apiUri}/$3`,",
-            "            data: {$4}",
-            "        })",
-            "",
-            "        return res",
-            "    } catch (err) {",
-            "        return err",
-            "    }",
-            "}",
-            ""
-        ],
-        "description": "Axios request",
-        "scope": "typescript,typescriptreact,javascript,javascriptreact"
-    },
-    "themespacing": {
-        "prefix": "tspx",
-        "body": [
-            "`${theme.spacing($1)}px`,",
-        ],
-        "description": "V4 Mui Theme Spacing",
-        "scope": "typescript,typescriptreact,javascript,javascriptreact"
-    },
-    "jsonnotation": {
-        "prefix": "json",
-        "body": [
-            "\"$1\": \"$2\",",
-        ],
-        "description": "JSON Notation",
-        "scope": "javascript"
-    },
-    "translateExpression": {
-        "prefix": "t",
-        "body": [
-            "{t('$1')}",
-        ],
-        "description": "WNM Translate Hook React Expression",
-        "scope": "javascript,javascriptreact"
-    },
-    "borderRed": {
-        "prefix": "bdr",
-        "body": [
-            "border: \"3px solid red\"",
-        ],
-        "description": "Border red",
-        "scope": "javascript,javascriptreact"
-    },
-    "borderRedWithStylesProp": {
-        "prefix": "sbdr",
-        "body": [
-            "style={{ border: \"3px solid red\" }}",
-        ],
-        "description": "Border red with style prop",
-        "scope": "javascript,javascriptreact"
-    },
-    "WNMReactArrowFunctionExportComponent": {
-        "prefix": "wafce",
-        "body": [
-            "// External components",
-            "import React from \"react\";",
-            "import { Box } from \"@material-ui/core\";",
-            "",
-            "// Utils & Config",
-            "import { useStyles } from \"./${1:${TM_FILENAME_BASE}}.styles\";",
-            "",
-            "// Internal components",
-            "",
-            "const ${1:${TM_FILENAME_BASE}} = () => {",
-            "",
-            "    const { root } = useStyles();",
-            "",
-            "    return (",
-            "        <Box className={root}>",
-            "           $0",
-            "        </Box>",
-            "    )",
-            "",
-            "};",
-            "",
-            "export default ${1:${TM_FILENAME_BASE}};",
-            ""
-        ],
-        "description": "WNM React Arrow Function Component with ES7 module system",
-        "scope": "typescript,typescriptreact,javascript,javascriptreact"
-    },
-    "className": {
-        "prefix": "cl",
-        "body": [
-            "className={$0}",
-        ],
-        "description": "ClassName prop",
-        "scope": "javascript,javascriptreact"
-    },
+  "customReactArrowFunctionExportComponent": {
+    "prefix": "rafce",
+    "body": [
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "    return (",
+      "        <>$0</>",
+      "    )",
+      "};",
+      "",
+      "export { ${1:${TM_FILENAME_BASE}} }",
+      ""
+    ],
+    "description": "Custom React Arrow Function Component with ES7 module system",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "customReactArrowFunctionExportComponentWithPropTypes": {
+    "prefix": "rafcep",
+    "body": [
+      "import PropTypes from 'prop-types'",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "    return (",
+      "        <>$0</>",
+      "    )",
+      "};",
+      "",
+      "${1:${TM_FILENAME_BASE}}.propTypes = {",
+      "",
+      "}",
+      "",
+      "export { ${1:${TM_FILENAME_BASE}} }",
+      ""
+    ],
+    "description": "Custom React Arrow Function Component with ES7 module system and PropTypes",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "namedImportStatement": {
+    "prefix": "imp",
+    "body": [
+      "import { $2 } from '$1'"
+    ],
+    "description": "Prop Types import",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "importPropTypes": {
+    "prefix": "ipt",
+    "body": [
+      "import PropTypes from 'prop-types'"
+    ],
+    "description": "Prop Types import",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "customPropTypesDeclaration": {
+    "prefix": "cpt",
+    "body": [
+      "${1:${TM_FILENAME_BASE}}.propTypes = {",
+      "    $0",
+      "}"
+    ],
+    "description": "Prop Types declaration",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "PropTypes": {
+    "prefix": "pt",
+    "body": [
+      "PropTypes."
+    ],
+    "description": "Prop Types declaration",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "customExport": {
+    "prefix": "exp",
+    "body": [
+      "export { ${2:${TM_FILENAME_BASE}} } from './${1:${TM_FILENAME_BASE}}'",
+      ""
+    ],
+    "description": "Custom export for index file",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "consoleLog": {
+    "prefix": "clg",
+    "body": [
+      "console.log($1)",
+    ],
+    "description": "Console log",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "axiosReq": {
+    "prefix": "axiosreq",
+    "body": [
+      "export const $1 = async () => {",
+      "    try {",
+      "        const res = await Axios({",
+      "            method: '$2',",
+      "            url: `\\${apiUri}/$3`,",
+      "            data: {$4}",
+      "        })",
+      "",
+      "        return res",
+      "    } catch (err) {",
+      "        return err",
+      "    }",
+      "}",
+      ""
+    ],
+    "description": "Axios request",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "themespacing": {
+    "prefix": "tspx",
+    "body": [
+      "`${theme.spacing($1)}px`,",
+    ],
+    "description": "V4 Mui Theme Spacing",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "jsonnotation": {
+    "prefix": "json",
+    "body": [
+      "\"$1\": \"$2\",",
+    ],
+    "description": "JSON Notation",
+    "scope": "javascript"
+  },
+  "translateExpression": {
+    "prefix": "t",
+    "body": [
+      "{t('$1')}",
+    ],
+    "description": "WNM Translate Hook React Expression",
+    "scope": "javascript,javascriptreact"
+  },
+  "borderRed": {
+    "prefix": "bdr",
+    "body": [
+      "border: \"3px solid red\"",
+    ],
+    "description": "Border red",
+    "scope": "javascript,javascriptreact"
+  },
+  "borderRedWithStylesProp": {
+    "prefix": "sbdr",
+    "body": [
+      "style={{ border: \"3px solid red\" }}",
+    ],
+    "description": "Border red with style prop",
+    "scope": "javascript,javascriptreact"
+  },
+  "WNMReactArrowFunctionExportComponent": {
+    "prefix": "wafce",
+    "body": [
+      "// External components",
+      "import React from \"react\";",
+      "import { Box } from \"@material-ui/core\";",
+      "",
+      "// Utils & Config",
+      "import { useStyles } from \"./${1:${TM_FILENAME_BASE}}.styles\";",
+      "",
+      "// Internal components",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "",
+      "    const { _root } = useStyles();",
+      "",
+      "    return (",
+      "        <Box className={_root}>",
+      "           $0",
+      "        </Box>",
+      "    )",
+      "",
+      "};",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}};",
+      ""
+    ],
+    "description": "WNM React Arrow Function Component with ES7 module system",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "className": {
+    "prefix": "cl",
+    "body": [
+      "className={$0}",
+    ],
+    "description": "ClassName prop",
+    "scope": "javascript,javascriptreact"
+  },
 }

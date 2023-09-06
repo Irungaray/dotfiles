@@ -11,6 +11,13 @@
         "when": "terminalFocus"
     },
 
+    // New terminal
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus"
+    },
+
     // Problems focus
     {
         "key": "ctrl+shift+m",
@@ -42,6 +49,18 @@
         "key": "ctrl+shift+left",
         "command": "workbench.action.terminal.focusPreviousPane",
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+
+    // Scroll terminal
+    {
+        "key": "ctrl+alt+up",
+        "command": "workbench.action.terminal.scrollUp",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
+    },
+    {
+        "key": "ctrl+alt+down",
+        "command": "workbench.action.terminal.scrollDown",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
     },
 
     // Kill active terminal
@@ -87,6 +106,11 @@
     {
         "key": "ctrl+enter",
         "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "typescript.goToSourceDefinition",
         "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
     },
     {
@@ -141,14 +165,36 @@
         },
         "when": "editorTextFocus"
     },
+
+
+    // Match previous selection
     {
         "key": "ctrl+shift+d",
         "command": "editor.action.previousSelectionMatchFindAction",
         "when": "editorFocus"
     },
+
+    // Navigate back/forwards
     {
-        "key": "ctrl+shift+f3",
-        "command": "-editor.action.previousSelectionMatchFindAction",
-        "when": "editorFocus"
+        "key": "alt+left",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "alt+right",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+
+    // Go to next/prev change
+    {
+        "key": "ctrl+shift+alt+right",
+        "command": "workbench.action.editor.nextChange",
+        "when": "editorTextFocus && !textCompareEditorActive"
+    },
+    {
+        "key": "ctrl+shift+alt+left",
+        "command": "workbench.action.editor.previousChange",
+        "when": "editorTextFocus && !textCompareEditorActive"
     },
 ]

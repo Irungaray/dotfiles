@@ -49,8 +49,8 @@ set_from_resource $i3-wm.binding. i3-wm.binding.
 # These are the labels which define each i3 workspace.
 ###############################################################################
 
-set_from_resource $ws1  i3-wm.workspace.01.name "1"
-set_from_resource $ws2  i3-wm.workspace.02.name "2"
+set_from_resource $ws1  i3-wm.workspace.01.name "main"
+set_from_resource $ws2  i3-wm.workspace.02.name "secondary"
 set_from_resource $ws3  i3-wm.workspace.03.name "3"
 set_from_resource $ws4  i3-wm.workspace.04.name "4"
 set_from_resource $ws5  i3-wm.workspace.05.name "5"
@@ -58,7 +58,7 @@ set_from_resource $ws6  i3-wm.workspace.06.name "6"
 set_from_resource $ws7  i3-wm.workspace.07.name "7"
 set_from_resource $ws8  i3-wm.workspace.08.name "8"
 set_from_resource $ws9  i3-wm.workspace.09.name "9"
-set_from_resource $ws10 i3-wm.workspace.10.name "10"
+set_from_resource $ws10 i3-wm.workspace.10.name "last"
 set_from_resource $ws11 i3-wm.workspace.11.name "11"
 set_from_resource $ws12 i3-wm.workspace.12.name "12"
 set_from_resource $ws13 i3-wm.workspace.13.name "13"
@@ -531,8 +531,8 @@ gaps inner $i3-wm.gaps.inner.size
 gaps outer $i3-wm.gaps.outer.size
 
 # Only enable gaps on a workspace when there is at least one container
-set_from_resource $i3-wm.gaps.smart i3-wm.gaps.smart on
-smart_gaps $i3-wm.gaps.smart
+# set_from_resource $i3-wm.gaps.smart i3-wm.gaps.smart on
+# smart_gaps $i3-wm.gaps.smart
 
 # Enable popup during fullscreen
 set_from_resource $i3-wm.gaps.popup_during_fullscreen i3-wm.gaps.popup_during_fullscreen smart
@@ -610,7 +610,7 @@ font $i3-wm.font
 
 set_from_resource $i3-wm.bar.position i3-wm.bar.position bottom
 set_from_resource $i3-wm.bar.font i3-wm.bar.font pango:Source Code Pro Medium 13, Material Design Icons 13
-set_from_resource $i3-wm.bar.separator i3-wm.bar.separator " "
+set_from_resource $i3-wm.bar.separator i3-wm.bar.separator "_"
 set_from_resource $i3-wm.bar.trayoutput i3-wm.bar.trayoutput primary
 set_from_resource $i3-wm.bar.stripworkspacenumbers i3-wm.bar.stripworkspacenumbers yes
 set_from_resource $i3-wm.bar.mode i3-wm.bar.mode dock
@@ -699,7 +699,7 @@ workspace "$ws17" output DVI-D-0
 workspace "$ws18" output DVI-D-0
 workspace "$ws19" output DVI-D-0
 
-for_window [class="Telegram*"]; resize shrink width 10000px; resize grow width 600px;
+for_window [class="Telegram*"]; resize shrink width 10000px; resize grow width 570px;
 for_window [class="Slack*"]; resize shrink width 10000px; resize grow width 400px;
 for_window [title="Calculator*"]; resize shrink width 10000; resize grow width 600px;
 
