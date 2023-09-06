@@ -3,28 +3,22 @@
 # Curl
 sudo apt install apt-transport-https curl
 
-# Git
-sudo apt install git
+# Snap
+sudo apt install snapd
 
 # Vim
 sudo apt install vim
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-# ZSH
-sudo apt install zsh
-chsh -s $(which zsh)
-
-# Oh My Zsh! & Plugins
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 nvm install node
 nvm install 12.13.1
 nvm alias default 12.13.1
+
+# Yarn
+npm install --global yarn
 
 # Regolith stuff
 sudo apt install i3xrocks-temp
@@ -70,10 +64,13 @@ sudo apt-get install highlight
 sudo apt install nitrogen
 
 # Autokey
-sudo apt install autokey-gt
+sudo apt install autokey-gtk
 
 # VLC
 sudo apt install vlc
+
+# Calc
+sudo apt install gnome-calculator
 
 # GitHub Desktop
 cd ~/Downloads
@@ -96,3 +93,15 @@ sudo apt-get -y install postgresql-13
     # Then:
         # sudo -u postgres psql
         # psql -U postgres -h localhost
+
+# ZSH
+sudo apt install zsh
+chsh -s $(which zsh)
+
+# Oh My Zsh! & Plugins
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
