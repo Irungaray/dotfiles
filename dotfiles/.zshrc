@@ -1,7 +1,7 @@
 # Paths
-export ZSH="/home/irunga/.oh-my-zsh"
-export i3_PATH="/home/irunga/Documents"
-export NODE_ENV=dev
+export ZSH="$HOME/.oh-my-zsh"
+export i3_PATH="$HOME/Documents"
+# export NODE_ENV=dev
 
 # Theme to load & theme config
     if [ ! -e  ".git" ]; then
@@ -112,8 +112,9 @@ source $ZSH/oh-my-zsh.sh
 
     function add() {
 	    my_file=$(find_file "$1") \
-        && git add $my_file \
-	    && echo "Added $my_file"
+            && git add $my_file
+
+	    [ -e "$my_file" ] && echo "Added $my_file"
     }
 
     # Calculator. Not working :(
@@ -153,4 +154,10 @@ source $ZSH/oh-my-zsh.sh
     # export PATH="$DENO_INSTALL/bin:$PATH"
     # /home/irunga/.deno/bin/deno --help
 
-source /home/irunga/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+

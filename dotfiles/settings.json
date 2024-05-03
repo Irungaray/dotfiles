@@ -12,7 +12,6 @@
     "editor.parameterHints.enabled": false,
     "editor.hover.enabled": true,
     "update.mode": "none",
-    "workbench.iconTheme": "vscode-icons",
     "[javascriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -65,6 +64,26 @@
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.activeIconPack": "nest",
+    "material-icon-theme.files.associations": {
+        "*.dto.ts": "nest-guard",
+        "*.guard.ts": "nest-middleware",
+        "*.repository.ts": "nest-decorator",
+        "*.mapper.ts": "nest-filter",
+        "*.styles.js": "css-map",
+        "*.styles.jsx": "css-map",
+        "*.styles.ts": "css-map",
+        "*.styles.tsx": "css-map"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
+    "eslint.codeActionsOnSave.rules": null,
+    "[css]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
+    "diffEditor.ignoreTrimWhitespace": false
     // "editor.tokenColorCustomizations": {
     //     "textMateRules": [
     //         {

@@ -107,10 +107,18 @@
     "description": "Axios request",
     "scope": "typescript,typescriptreact,javascript,javascriptreact"
   },
-  "themespacing": {
+  "themespacingpx": {
     "prefix": "tspx",
     "body": [
       "`${theme.spacing($1)}px`,",
+    ],
+    "description": "V4 Mui Theme Spacing",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "themespacing": {
+    "prefix": "ts",
+    "body": [
+      "theme.spacing($1),",
     ],
     "description": "V4 Mui Theme Spacing",
     "scope": "typescript,typescriptreact,javascript,javascriptreact"
@@ -129,7 +137,7 @@
       "{t('$1')}",
     ],
     "description": "WNM Translate Hook React Expression",
-    "scope": "javascript,javascriptreact"
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
   },
   "borderRed": {
     "prefix": "bdr",
