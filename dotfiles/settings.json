@@ -77,13 +77,41 @@
         "*.styles.tsx": "css-map"
     },
     "[typescriptreact]": {
-        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "eslint.codeActionsOnSave.rules": null,
     "[css]": {
         "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
     },
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "codeium.enableConfig": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true
+    },
+    "gitlens.views.scm.grouped.views": {
+        "commits": false,
+        "branches": false,
+        "remotes": false,
+        "stashes": false,
+        "tags": false,
+        "worktrees": false,
+        "contributors": false,
+        "repositories": false,
+        "searchAndCompare": false,
+        "launchpad": false
+    },
+    "git-autoconfig.configList": [
+        {}
+    ],
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "diffEditor.useInlineViewWhenSpaceIsLimited": false,
+    "chat.commandCenter.enabled": false,
+    "window.titleBarStyle": "native",
+    "window.menuBarVisibility": "toggle",
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
     // "editor.tokenColorCustomizations": {
     //     "textMateRules": [
     //         {
@@ -448,4 +476,7 @@
     //         }
     //     ]
     //   },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
 }

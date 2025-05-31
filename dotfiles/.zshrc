@@ -46,6 +46,7 @@ source $ZSH/oh-my-zsh.sh
       alias cc="vim  ~/.config/compton.conf"
       alias android="cd ~/Documents/AiCore/android-studio/bin/ && ./studio.sh"
       #alias loc="find . -name '*.php' | sed 's/.*/"&"/' | xargs  wc -l"
+      alias please="sudo"
 
     # Code
       alias c="codium ."
@@ -53,6 +54,10 @@ source $ZSH/oh-my-zsh.sh
       alias n="npm"
       alias nr="npm run"
       alias nrd="npm run dev"
+      alias pn="pnpm"
+      alias nn="pnpm"
+      alias nnr="pnpm run"
+      alias nnrd="pnpm run dev"
 
     # git
       alias gac="git add . && git commit -m"
@@ -83,7 +88,7 @@ source $ZSH/oh-my-zsh.sh
       alias nrl="npm run update:libs"
       alias nre="npm run update:env"
 
-      alias pidkill="pkill -9"
+      alias pidkill="kill -9"
 
 # Functions
     # Git clone & cd into
@@ -145,6 +150,18 @@ source $ZSH/oh-my-zsh.sh
 	    fi
     }
 
+    function cp() {
+        mkdir -p ./bin
+
+        local src_file="$1"
+        local filename=$(basename "$src_file" .pas)
+        local bin_path="./bin/$filename"
+
+        echo "Compiling $src_file -> $bin_path"
+
+        fpc "$src_file" -o"$bin_path" && "$bin_path"
+    }
+
 # Paths
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -155,9 +172,22 @@ source $ZSH/oh-my-zsh.sh
     # /home/irunga/.deno/bin/deno --help
 
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH/custom/plugins/zsh-directory-history/directory-history.plugin.zsh
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+
+# Automatically load the version in .nvmrc
+autoload -U add-zsh-hook
+
+load-nvmrc() {
+  if [[ -f .nvmrc ]]; then
+    nvm use
+  fi
+}
+
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
 

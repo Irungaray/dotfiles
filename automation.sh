@@ -21,9 +21,9 @@ nvm alias default 12.13.1
 npm install --global yarn
 
 # Regolith stuff
-sudo apt install i3xrocks-temp
-sudo apt install regolith-look-nord
-regolith-look refresh
+# sudo apt install i3xrocks-temp
+# sudo apt install regolith-look-nord
+# regolith-look refresh
 
 # Telegram
 sudo snap install telegram-desktop
@@ -42,14 +42,14 @@ rm google-chrome-stable_current_amd64.deb
 cd ~
 
 # VSCodium & VSCode
-snap install codium --classic
-sudo snap install code --classic
+# snap install codium --classic
+# sudo snap install code --classic
 
 # bPyTop
 sudo snap install bpytop
 
 # Compton
-sudo apt update && sudo apt install compton
+# sudo apt update && sudo apt install compton
 
 # Ranger
 sudo apt install ranger
@@ -61,10 +61,10 @@ git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger
 sudo apt-get install highlight
 
 # Nitrogen
-sudo apt install nitrogen
+# sudo apt install nitrogen
 
 # Autokey
-sudo apt install autokey-gtk
+# sudo apt install autokey-gtk
 
 # VLC
 sudo apt install vlc
@@ -100,8 +100,8 @@ chsh -s $(which zsh)
 
 # Oh My Zsh! & Plugins
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+sudo git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+sudo ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+sudo echo "source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
